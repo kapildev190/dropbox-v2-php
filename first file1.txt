@@ -1,0 +1,27 @@
+<html>
+<Head>
+<script	  src="https://code.jquery.com/jquery-3.3.1.js"		  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="		  crossorigin="anonymous"></script>
+<script type="text/javascript">
+$(document).ready(function ()
+{
+	$('input[name=firstName]').focus();
+    $("#YourTextBoxId").hover( function ()
+	{
+		$('#YourTextBoxId').trigger($.Event('keypress', { keycode: 13 }));
+        $("#YourTextBoxId").trigger("focus");
+    });
+
+	$("#YourTextBoxId").click( function ()
+	{
+		console.log('clicked');
+	});
+});
+</script>
+</head>
+<body>
+
+<input name="firstName" autofocus id="YourTextBoxId">
+
+</body>
+
+</html>
