@@ -8,7 +8,8 @@ $filePath = isset( $_REQUEST['path'] ) ? $_REQUEST['path'] : '';
 if( $filePath != '' )
 {
 	try {
-		$dbxApp 	 		= new dbx\DropboxApp('pkj3wpminfit30i','mgdesun91cmiokv','7oYNdBjOuoAAAAAAAAAEr1uVMlPDy3NNsl74VeI_ohIfPVHe3fWCrxUYF-bEf4qE');
+		
+		$dbxApp 	 		= new dbx\DropboxApp('Your App key','Your App secret','Your Access Token');
 		$dbxClient   		= new dbx\Dropbox($dbxApp);
 		$result = $dbxClient->getTemporaryLink($filePath);               
 		if( $result->link != '' )

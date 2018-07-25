@@ -22,7 +22,7 @@ $flag  = isset( $_REQUEST['flag'] ) ? $_REQUEST['flag'] : 0;
 ini_set('max_execution_time', 0); 
 if( $flag == 1 )
 {
-	$dbxApp 	 		= new dbx\DropboxApp('pkj3wpminfit30i','mgdesun91cmiokv','7oYNdBjOuoAAAAAAAAAEr1uVMlPDy3NNsl74VeI_ohIfPVHe3fWCrxUYF-bEf4qE');
+	$dbxApp 	 		= new dbx\DropboxApp('Your App key','Your App secret','Your Access Token');
 	$accountInfo 		= $dbxApp->getClientId();
 	$dbxClient   		= new dbx\Dropbox($dbxApp);
 	$listFolderContents = $dbxClient->listFolder("/");
@@ -45,7 +45,8 @@ if( $flag == 1 )
 
 function getItems( $path = null )
 {
-	$dbxApp 	 = new dbx\DropboxApp('pkj3wpminfit30i','mgdesun91cmiokv','7oYNdBjOuoAAAAAAAAAEr1uVMlPDy3NNsl74VeI_ohIfPVHe3fWCrxUYF-bEf4qE');
+	
+	$dbxApp 	 		= new dbx\DropboxApp('Your App key','Your App secret','Your Access Token');
 	$accountInfo = $dbxApp->getClientId();
 	$dbxClient   = new dbx\Dropbox($dbxApp);
 	if( $path != null )
